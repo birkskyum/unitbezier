@@ -1,6 +1,6 @@
 {
   "name": "unitbezier-esm-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "unit bezier curve interpolation",
   "main": "dist/index.mjs",
   "type": "module",
