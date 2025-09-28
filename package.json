@@ -45,8 +45,6 @@
     }
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true,
-    "trustedPublishing": true
+    "access": "public"
   }
 }
