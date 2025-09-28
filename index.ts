@@ -74,3 +74,5 @@ export class UnitBezier {
         return this.sampleCurveY(this.solveCurveX(x, epsilon));
     }
 }
+
+export default UnitBezier;

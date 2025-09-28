@@ -1,6 +1,6 @@
 {
   "name": "@birkskyum/unitbezier",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "unit bezier curve interpolation",
   "main": "dist/index.mjs",
   "type": "module",
