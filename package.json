@@ -1,20 +1,22 @@
 {
-  "name": "@mapbox/unitbezier",
-  "version": "0.0.1",
+  "name": "@birkskyum/unitbezier",
+  "version": "1.0.0",
   "description": "unit bezier curve interpolation",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "main": "dist/index.mjs",
+  "type": "module",
   "scripts": {
-    "pretest": "eslint index.js test/*.js",
-    "test": "node test/unitbezier.js"
+    "build": "npm run build:types && rolldown --config rolldown.config.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "oxlint .",
+    "build:types": "tsc --project tsconfig.json"
   },
   "files": [
-    "index.js",
-    "index.d.ts"
+    "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:mapbox/unitbezier.git"
+    "url": "git@github.com:birkskyum/unitbezier.git"
   },
   "keywords": [
     "unit",
@@ -29,11 +31,17 @@
   },
   "homepage": "https://github.com/mapbox/unitbezier",
   "devDependencies": {
-    "eslint": "^8.0.1",
-    "eslint-config-mourner": "^2.0.3",
-    "tape": "^5.3.1"
+    "oxlint": "^1.18.0",
+    "rolldown": "^1.0.0-beta.40",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
-  "eslintConfig": {
-    "extends": "mourner"
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+    }
   }
 }
